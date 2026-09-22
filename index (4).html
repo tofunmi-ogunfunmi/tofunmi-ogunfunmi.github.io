@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tofunmi Ogunfunmi | Materials Scientist</title>
+<meta name="description" content="Tofunmi Ogunfunmi, Ph.D. candidate in Materials Science & Engineering at UC Berkeley. Electron microscopy, solid-state batteries, and data-driven characterization.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<style>@font-face{font-family:'Proxima Nova';font-weight:400;font-style:normal;src:local('Proxima Nova Regular'),local('ProximaNova-Regular')}@font-face{font-family:'Proxima Nova';font-weight:600;font-style:normal;src:local('Proxima Nova Semibold'),local('ProximaNova-Semibold')}@font-face{font-family:'Proxima Nova';font-weight:700;font-style:normal;src:local('Proxima Nova Bold'),local('ProximaNova-Bold')}
+:root{--bg:#0a0a0c;--card:#14141a;--t1:#f0ede8;--t2:#9a968f;--acc:#c8ff00;--acc-dim:rgba(200,255,0,.06);--blu:#4a9eff;--warm:#ffb464;--serif:'Proxima Nova','DM Sans',system-ui,sans-serif;--sans:'DM Sans',system-ui,sans-serif;--bdr:rgba(255,255,255,.06)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--sans);background:var(--bg);color:var(--t1);line-height:1.6;-webkit-font-smoothing:antialiased}
+a:focus-visible,button:focus-visible,.gallery-item:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+nav{position:fixed;top:0;width:100%;z-index:100;padding:1.1rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,12,.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--bdr)}
+nav .logo{font-family:var(--serif);font-size:1.3rem}nav .logo span{color:var(--acc)}
+nav ul{list-style:none;display:flex;gap:2rem}nav a{color:var(--t2);text-decoration:none;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;transition:color .2s}nav a:hover{color:var(--t1)}
+.hero{min-height:100vh;display:flex;align-items:center;padding:8rem 2.5rem 4rem}
+.hero-content{max-width:1100px;margin:0 auto;width:100%}
+.hero-label{display:inline-block;padding:.35rem .9rem;background:var(--acc-dim);border:1px solid rgba(200,255,0,.1);border-radius:100px;font-size:.8rem;font-weight:500;color:var(--acc);letter-spacing:.02em;margin-bottom:2rem}
+.hero h1{font-family:var(--serif);font-size:clamp(3rem,6.5vw,5rem);line-height:1.08;font-weight:400;letter-spacing:-.03em;margin-bottom:1.2rem}
+.hero-sub{font-size:1.1rem;color:var(--t2);max-width:780px;line-height:1.7}
+.hero-main{display:flex;align-items:center;justify-content:space-between;gap:2.5rem}
+.hero-text{flex:1}
+.hero-avatar{width:280px;height:280px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid var(--bdr)}
+.hero-meta{display:flex;gap:2.5rem;flex-wrap:wrap;margin-top:2.5rem}
+.hero-meta-item{display:flex;flex-direction:column;gap:.15rem}
+.hero-meta-item .label{font-size:.72rem;letter-spacing:.04em;color:var(--t2)}
+.hero-meta-item .value{font-family:var(--serif);font-size:1.05rem}
+@media (max-width:768px){.hero-main{flex-direction:column-reverse;align-items:flex-start}.hero-avatar{width:180px;height:180px}}
+section{padding:5rem 2.5rem;max-width:1100px;margin:0 auto}
+.section-header{margin-bottom:2.5rem}
+.section-number{font-size:.72rem;font-weight:500;color:var(--acc);letter-spacing:.08em;display:block;margin-bottom:.4rem}
+.section-title{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:400;letter-spacing:-.02em}
+.section-intro{color:var(--t2);font-size:.95rem;max-width:680px;margin-top:.6rem}
+.divider{width:100%;max-width:1100px;margin:0 auto;height:1px;background:var(--bdr)}
+.dl{list-style:none;padding:0;margin:0}.dl li{font-size:.87rem;color:var(--t2);line-height:1.55;padding-left:1rem;position:relative;margin-bottom:.35rem}.dl li:last-child{margin-bottom:0}.dl li::before{content:'';position:absolute;left:0;top:.55rem;width:4px;height:4px;border-radius:50%;background:var(--acc);opacity:.45}
+.dl li strong{color:var(--t1);font-weight:500}
+.pillar .dl li::before{background:var(--t2);opacity:.3}
+.sub-h{font-size:.8rem;font-weight:500;color:var(--t1);margin:.9rem 0 .35rem}
+.sub-h:first-of-type{margin-top:.2rem}
+.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.pillar{background:var(--card);border:1px solid var(--bdr);border-radius:14px;padding:2rem 1.8rem}
+.pillar-number{font-size:.72rem;font-weight:600;letter-spacing:.06em;margin-bottom:1rem}
+.pillar:nth-child(1) .pillar-number{color:var(--acc)}.pillar:nth-child(2) .pillar-number{color:var(--blu)}.pillar:nth-child(3) .pillar-number{color:var(--warm)}
+.pillar h3{font-family:var(--serif);font-size:1.25rem;font-weight:400;margin-bottom:.7rem;line-height:1.3}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.2rem}
+.gallery-item{background:var(--card);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;cursor:pointer;transition:border-color .2s;display:flex;flex-direction:column}
+.gallery-item:hover{border-color:rgba(255,255,255,.12)}
+.gallery-img-wrap{position:relative;overflow:hidden;aspect-ratio:16/10;background:#0d0d10}
+.gallery-img-wrap img{width:100%;height:100%;object-fit:cover}
+.gallery-overlay{position:absolute;inset:0;background:rgba(10,10,12,.3);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s}
+.gallery-item:hover .gallery-overlay,.gallery-item:focus-visible .gallery-overlay{opacity:1}
+.gallery-zoom{font-size:1.6rem;color:var(--t1);width:44px;height:44px;border-radius:50%;background:rgba(10,10,12,.7);border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center}
+.gallery-caption{padding:1rem 1.3rem 1.2rem;display:flex;flex-direction:column;flex:1}
+.gallery-caption h4{font-family:var(--serif);font-size:1rem;font-weight:400;margin-bottom:.2rem}
+.gallery-caption p{font-size:.78rem;color:var(--t2);line-height:1.45;margin-bottom:.7rem}
+.gallery-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:.8rem;flex-wrap:wrap}
+.gallery-venue{font-size:.72rem;font-weight:500;color:var(--blu)}
+.paper-link{font-size:.75rem;font-weight:500;color:var(--acc);text-decoration:none;border-bottom:1px solid rgba(200,255,0,.35);padding-bottom:1px;transition:border-color .2s}
+.paper-link:hover{border-color:var(--acc)}
+.lightbox{position:fixed;inset:0;z-index:10000;background:rgba(5,5,7,.95);backdrop-filter:blur(20px);display:none;align-items:center;justify-content:center;padding:2rem;cursor:pointer}.lightbox.active{display:flex}
+.lb-inner{max-width:1000px;width:100%;cursor:default}.lb-inner img{width:100%;max-height:72vh;object-fit:contain;border-radius:10px;border:1px solid rgba(255,255,255,.08);background:#0d0d10}
+.lb-info{padding:1rem 0}.lb-info h3{font-family:var(--serif);font-size:1.3rem;font-weight:400;margin-bottom:.2rem}.lb-info p{font-size:.88rem;color:var(--t2);margin-bottom:.5rem}
+.lb-row{display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap}.lb-v{font-size:.78rem;color:var(--blu);font-weight:500}
+.lb-close{position:fixed;top:1.5rem;right:2rem;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);color:var(--t1);font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10001}.lb-nav{position:fixed;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:var(--t1);font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10001}.lb-nav.prev{left:1.5rem}.lb-nav.next{right:1.5rem}
+.research-list{display:flex;flex-direction:column;gap:1.2rem}
+.research-item{display:grid;grid-template-columns:7.5rem 1fr auto;gap:1.5rem;align-items:start;padding:1.6rem 1.8rem;background:var(--card);border:1px solid var(--bdr);border-radius:14px}
+.research-year{font-size:.72rem;font-weight:500;color:var(--acc);letter-spacing:.04em;padding-top:.15rem}
+.research-body h3{font-family:var(--serif);font-size:1.1rem;font-weight:400;margin-bottom:.3rem;line-height:1.3}
+.research-body .venue{font-size:.8rem;color:var(--blu);font-weight:500;margin-bottom:.6rem}
+.research-type{padding:.25rem .7rem;background:rgba(255,255,255,.04);border:1px solid var(--bdr);border-radius:6px;font-size:.7rem;font-weight:500;color:var(--t2);letter-spacing:.03em;white-space:nowrap;height:fit-content}
+.pub-list{list-style:none;display:flex;flex-direction:column}
+.pub{display:grid;grid-template-columns:4rem 1fr auto;gap:1.5rem;align-items:baseline;padding:1.1rem 0;border-bottom:1px solid var(--bdr)}
+.pub:first-child{border-top:1px solid var(--bdr)}
+.pub-year{font-size:.8rem;color:var(--acc);font-weight:500}
+.pub-title{font-family:var(--serif);font-size:1rem;line-height:1.4;color:var(--t1);text-decoration:none}
+a.pub-title:hover{color:var(--acc)}
+.pub-meta{font-size:.8rem;color:var(--t2);margin-top:.2rem}.pub-meta em{color:var(--blu);font-style:normal}
+.pub-role{font-size:.7rem;color:var(--t2);white-space:nowrap}
+.pub-role.lead{color:var(--acc)}
+.talks{margin-top:1.8rem;font-size:.88rem;color:var(--t2)}
+.journey-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.journey-card{padding:1.8rem;background:var(--card);border:1px solid var(--bdr);border-radius:14px}
+.journey-card .year{font-size:.72rem;font-weight:500;color:var(--acc);letter-spacing:.04em;margin-bottom:.6rem}
+.journey-card h3{font-family:var(--serif);font-size:1.2rem;font-weight:400;margin-bottom:.2rem}
+.journey-card .school{font-size:.85rem;color:var(--blu);font-weight:500;margin-bottom:.6rem}
+.journey-card p{font-size:.83rem;color:var(--t2);line-height:1.55}
+.coursework-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.8rem;margin-top:1.2rem}
+.course-item{padding:.85rem 1.1rem;background:var(--card);border:1px solid var(--bdr);border-radius:10px}
+.course-item .course-code{font-size:.72rem;font-weight:600;color:var(--acc);letter-spacing:.03em;margin-bottom:.15rem}
+.course-item .course-name{font-size:.88rem;color:var(--t1);margin-bottom:.1rem}
+.course-item .course-dept{font-size:.72rem;color:var(--t2)}
+.h-sub{font-family:var(--serif);font-size:1.25rem;font-weight:400;margin:2.5rem 0 .3rem}
+.cta{text-align:center;padding:6rem 2.5rem}
+.cta h2{font-family:var(--serif);font-size:clamp(2.2rem,4.5vw,3.5rem);font-weight:400;letter-spacing:-.02em;margin-bottom:.8rem}
+.cta p{font-size:1rem;color:var(--t2);max-width:520px;margin:0 auto 2rem;line-height:1.65}
+.cta-links{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.8rem;border-radius:100px;font-family:var(--sans);font-size:.85rem;font-weight:500;text-decoration:none;transition:all .2s;letter-spacing:.02em}
+.btn.p{background:var(--acc);color:var(--bg);border:1px solid var(--acc)}.btn.p:hover{background:#d8ff40}
+.btn.s{background:transparent;color:var(--t1);border:1px solid rgba(255,255,255,.15)}.btn.s:hover{border-color:rgba(255,255,255,.25)}
+footer{padding:2rem 2.5rem;text-align:center;border-top:1px solid var(--bdr);font-size:.75rem;color:var(--t2)}
+@media(max-width:900px){nav{padding:1rem 1.5rem}nav ul{gap:1rem}nav a{font-size:.72rem}.hero{padding:7rem 1.5rem 3rem}section{padding:3.5rem 1.5rem}.journey-grid,.pillars-grid{grid-template-columns:1fr}.research-item{grid-template-columns:1fr;gap:.4rem}.research-type{display:none}.gallery-grid{grid-template-columns:1fr}.lb-nav{display:none}.pub{grid-template-columns:1fr;gap:.2rem}}
+@media(max-width:600px){nav ul{display:none}}
+</style></head><body>
+<nav><div class="logo">T<span>.</span>O</div><ul><li><a href="#experience">Experience</a></li><li><a href="#about">Skills</a></li><li><a href="#gallery">Microscopy</a></li><li><a href="#publications">Publications</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+
+<section class="hero">
+<div class="hero-content">
+  <div class="hero-label">Ph.D. candidate at UC Berkeley, graduating December 2026</div>
+  <div class="hero-main">
+    <div class="hero-text">
+      <h1>Tofunmi Ogunfunmi</h1>
+      <p class="hero-sub">Materials scientist specializing in electron microscopy and solid-state batteries. I pair multimodal characterization with Python and machine-learning pipelines to connect microstructure to battery performance and to speed up materials development from discovery through qualification.</p>
+    </div>
+    <img src="images/tofunmi.jpg" alt="Portrait of Tofunmi Ogunfunmi" class="hero-avatar">
+  </div>
+  <div class="hero-meta">
+    <div class="hero-meta-item"><span class="label">Education</span><span class="value">MIT, WPI, UC Berkeley</span></div>
+    <div class="hero-meta-item"><span class="label">Research home</span><span class="value">NCEM, Lawrence Berkeley National Lab</span></div>
+    <div class="hero-meta-item"><span class="label">Publications</span><span class="value">8 peer-reviewed, incl. Joule, Science Advances, ACS Nano</span></div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="section-header"><span class="section-number">01</span><h2 class="section-title">Experience</h2></div>
+<div class="research-list">
+
+<div class="research-item"><span class="research-year">Aug 2021 to present</span><div class="research-body">
+<h3>Graduate Researcher, Lawrence Berkeley National Laboratory</h3><div class="venue">National Center for Electron Microscopy, advised by Dr. Mary Scott</div>
+<div class="sub-h">Ag/Li₃PS₄ solid-state electrolytes</div>
+<ul class="dl">
+<li>Led multimodal characterization (SEM/EDS, FIB tomography) of Ag-nanoparticle-filled Li₃PS₄ electrolytes to establish the structure–property relationships behind dendrite suppression.</li>
+<li>Showed that dispersing Ag nanoparticles in amorphous Li₃PS₄ suppresses lithium dendrite failure, <strong>extending cell lifetime from ~18 h to over 80 h</strong> with stable cycling.</li>
+</ul>
+<div class="sub-h">4D-STEM analysis pipeline</div>
+<ul class="dl">
+<li>Built Python pipelines (py4DSTEM, NumPy, scikit-learn) that process GB-scale 4D-STEM datasets into phase maps and defect signatures.</li>
+<li>Developing automated stacking-fault detection with PCA and supervised classification to replace manual review.</li>
+</ul>
+<div class="sub-h">Beam–material interactions and high-throughput testing</div>
+<ul class="dl">
+<li>Investigated electron-beam damage in LLZO using air-free transfer; contributed to high-throughput conductivity-screening protocols for accelerated materials qualification.</li>
+<li>Performed ex-situ TEM/SEM of LLZO supporting work showing that beam charging drives lithium growth on solid-electrolyte surfaces, setting criteria to separate real electrochemistry from imaging artifacts.</li>
+</ul></div><span class="research-type">Ph.D.</span></div>
+
+<div class="research-item"><span class="research-year">Summers 2018 &amp; 2019</span><div class="research-body">
+<h3>Hardware Developer Intern, IBM</h3><div class="venue">Chemical &amp; X-ray Failure Analysis, Fishkill, NY</div>
+<ul class="dl">
+<li>Ran root-cause failure analysis on field-returned Li-ion battery leakage with 3D X-ray and SEM/EDS, localizing the leak to the gasket and identifying corrosion- and electrolyte-derived chemistry.</li>
+<li>Calibrated a high-temperature XRD stage against a silicon thermal-expansion standard (25–275 °C) for accurate HTXRD phase analysis of flip-chip solder.</li>
+<li>Modeled SnO₂-on-silicon films by X-ray reflectivity, resolving layer thickness, density, and roughness, and flagged an unexpected dense surface layer for XRF follow-up.</li>
+</ul></div><span class="research-type">Internship</span></div>
+
+<div class="research-item"><span class="research-year">Aug 2018 to Sep 2020</span><div class="research-body">
+<h3>Graduate Research Assistant, Worcester Polytechnic Institute</h3><div class="venue">Soboyejo Energy Lab, advised by Dr. Wole Soboyejo</div>
+<ul class="dl">
+<li>Synthesized and characterized a novel LiBH₄–LiNH₂-based solid electrolyte (XRD, SEM/EDS, impedance, CV), correlating LiI doping with amorphization and ionic conductivity.</li>
+<li>Mapped compressive failure with in-situ digital image correlation, linking LiI content to a brittle-to-ductile transition and pinpointing an optimal crimping pressure for cell performance.</li>
+</ul></div><span class="research-type">M.S.</span></div>
+
+<div class="research-item"><span class="research-year">Feb 2017 to Jun 2018</span><div class="research-body">
+<h3>Undergraduate Researcher, MIT Photovoltaics Research Lab</h3><div class="venue">Advised by Dr. Juan-Pablo Correa-Baena and Dr. Tonio Buonassisi</div>
+<ul class="dl">
+<li>High-throughput XRD characterization of 75 perovskite-inspired thin-film compositions within an ML-accelerated discovery workflow (published in Joule, 2019).</li>
+</ul></div><span class="research-type">B.S.</span></div>
+
+</div></section>
+<div class="divider"></div>
+
+<section id="about"><div class="section-header"><span class="section-number">02</span><h2 class="section-title">What I Bring</h2></div>
+<div class="pillars-grid">
+<div class="pillar"><div class="pillar-number">Characterization</div>
+<h3>Electron microscopy &amp; materials analysis</h3>
+<ul class="dl">
+<li>SEM/EDS, TEM/STEM, 4D-STEM, EELS, cryo-FIB, FIB-SEM tomography, XRD, XAS</li>
+<li>Air-sensitive sample preparation and air-free transfer workflows</li>
+<li>Battery testing: impedance spectroscopy, cyclic voltammetry, structure–performance correlation</li>
+<li>Failure analysis from the field (IBM) to the lab bench</li>
+</ul></div>
+<div class="pillar"><div class="pillar-number">Data &amp; machine learning</div>
+<h3>Turning microscopy data into decisions</h3>
+<ul class="dl">
+<li>Python: NumPy, Pandas, scikit-learn, py4DSTEM</li>
+<li>Machine learning for materials data: regression, classification, clustering, PCA</li>
+<li>Automated defect detection from GB-scale 4D-STEM datasets</li>
+<li>SQL, Tableau, Figma; design of experiments and statistical analysis</li>
+</ul></div>
+<div class="pillar"><div class="pillar-number">Community</div>
+<h3>Leadership &amp; outreach</h3>
+<ul class="dl">
+<li>Microscopy Society of America, Educational Outreach Team &amp; Regional Liaison</li>
+<li>BGESS (UC Berkeley), Financial Officer</li>
+<li>MRS Mentor &amp; Mentee; NSBE Bay Bridge Mentee</li>
+<li>GEM National Consortium Fellow</li>
+</ul></div>
+</div></section>
+<div class="divider"></div>
+
+<section id="gallery"><div class="section-header"><span class="section-number">03</span><h2 class="section-title">Microscopy Gallery</h2><p class="section-intro">Select images from published work. Click an image to enlarge it, or follow the link to read the paper.</p></div>
+<div class="gallery-grid" id="galleryGrid"></div>
+</section>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lbTitle"><button class="lb-close" id="lbClose" aria-label="Close">&#x2715;</button><button class="lb-nav prev" id="lbPrev" aria-label="Previous image">&#x2039;</button><button class="lb-nav next" id="lbNext" aria-label="Next image">&#x203A;</button><div class="lb-inner" id="lbInner"><img id="lbImg" src="" alt=""><div class="lb-info"><h3 id="lbTitle"></h3><p id="lbDesc"></p><div class="lb-row"><span class="lb-v" id="lbVenue"></span><a class="paper-link" id="lbLink" href="#" target="_blank" rel="noopener">Read the paper</a></div></div></div></div>
+<div class="divider"></div>
+
+<section id="publications"><div class="section-header"><span class="section-number">04</span><h2 class="section-title">Publications</h2></div>
+<ol class="pub-list">
+<li class="pub"><span class="pub-year">2025</span><div><a class="pub-title" href="https://doi.org/10.1002/aenm.202405700" target="_blank" rel="noopener">Mitigating Battery Cell Failure: Role of Ag-Nanoparticle Fillers in Solid Electrolyte Dendrite Suppression</a><div class="pub-meta">Diallo, M.S., <strong>Ogunfunmi, T.</strong>, et al. <em>Advanced Energy Materials</em></div></div><span class="pub-role lead">Co-first author</span></li>
+<li class="pub"><span class="pub-year">2025</span><div><a class="pub-title" href="https://doi.org/10.1021/acsnano.4c16271" target="_blank" rel="noopener">Tin–Carbon Dual Buffer Layer to Suppress Lithium Dendrite Growth in All-Solid-State Batteries</a><div class="pub-meta">Avvaru, V.S., <strong>Ogunfunmi, T.</strong>, et al. <em>ACS Nano</em> 19(18), 17347–17356</div></div><span class="pub-role">Co-author</span></li>
+<li class="pub"><span class="pub-year">2024</span><div><a class="pub-title" href="https://doi.org/10.1016/j.joule.2024.05.013" target="_blank" rel="noopener">Omics-Enabled Understanding of Electric Aircraft Battery Electrolytes</a><div class="pub-meta">Ko, Y., Baird, M.A., Peng, X., <strong>Ogunfunmi, T.</strong>, et al. <em>Joule</em> 8(8), 2393–2411</div></div><span class="pub-role">Co-author</span></li>
+<li class="pub"><span class="pub-year">2024</span><div><a class="pub-title" href="https://doi.org/10.1021/acs.chemmater.3c02351" target="_blank" rel="noopener">Oxygen Transport through Amorphous Cathode Coatings in Solid-State Batteries</a><div class="pub-meta">Cheng, J., Peng, X., Zhang, Y.Q., Tian, Y., <strong>Ogunfunmi, T.</strong>, et al. <em>Chemistry of Materials</em> 36(6), 2642–2651</div></div><span class="pub-role">Co-author</span></li>
+<li class="pub"><span class="pub-year">2024</span><div><a class="pub-title" href="https://doi.org/10.1039/d4ta00674g" target="_blank" rel="noopener">Conductive Carbon Embedded beneath Cathode Active Material for Longevity of Solid-State Batteries</a><div class="pub-meta">Byeon, Y.W., Yang, S., <strong>Ogunfunmi, T.</strong>, et al. <em>Journal of Materials Chemistry A</em> 12(14), 8359–8369</div></div><span class="pub-role">Co-author</span></li>
+<li class="pub"><span class="pub-year">2023</span><div><a class="pub-title" href="https://doi.org/10.1126/sciadv.abq3285" target="_blank" rel="noopener">Unraveling Li Growth Kinetics in Solid Electrolytes due to Electron Beam Charging</a><div class="pub-meta">Peng, X., Tu, Q., <strong>Ogunfunmi, T.</strong>, et al. <em>Science Advances</em> 9(17), eabq3285</div></div><span class="pub-role">Co-author</span></li>
+<li class="pub"><span class="pub-year">2021</span><div><a class="pub-title" href="https://doi.org/10.1557/s43580-021-00014-3" target="_blank" rel="noopener">An Investigation into Compressive Deformation and Failure Mechanisms in a Novel Li-ion Solid-State Electrolyte</a><div class="pub-meta"><strong>Ogunfunmi, T.</strong>, et al. <em>MRS Advances</em> 6(4), 154–161</div></div><span class="pub-role lead">First author</span></li>
+<li class="pub"><span class="pub-year">2019</span><div><a class="pub-title" href="https://doi.org/10.1016/j.joule.2019.05.014" target="_blank" rel="noopener">Accelerated Development of Perovskite-Inspired Materials via High-Throughput Synthesis and Machine-Learning Diagnosis</a><div class="pub-meta">Sun, S., … <strong>Ogunfunmi, T.</strong>, et al. <em>Joule</em> 3(6), 1437–1451</div></div><span class="pub-role">Co-author</span></li>
+</ol>
+<p class="talks">Conference presentations: MRS Fall 2020 (oral); Microscopy &amp; Microanalysis 2023 and 2024 (posters).</p>
+</section>
+<div class="divider"></div>
+
+<section id="education"><div class="section-header"><span class="section-number">05</span><h2 class="section-title">Education</h2></div>
+<div class="journey-grid">
+<div class="journey-card"><div class="year">2021 to Dec 2026 (expected)</div><h3>Ph.D. Materials Science &amp; Engineering</h3><div class="school">University of California, Berkeley</div><p>NCEM at Lawrence Berkeley National Lab with Dr. Mary Scott. GEM National Consortium Full Fellowship. Focus: solid-state battery materials, electron microscopy, materials characterization.</p></div>
+<div class="journey-card"><div class="year">2018 to Sep 2020</div><h3>M.S. Materials Science &amp; Engineering</h3><div class="school">Worcester Polytechnic Institute</div><p>Soboyejo Energy Lab. Thesis: failure mechanisms of solid-state Li-ion electrolytes.</p></div>
+<div class="journey-card"><div class="year">2014 to May 2018</div><h3>B.S. Materials Science &amp; Engineering</h3><div class="school">Massachusetts Institute of Technology</div><p>McDermott Scholar. High-throughput perovskite research at the MIT Photovoltaics Research Lab.</p></div>
+</div>
+<h3 class="h-sub">Honors &amp; training</h3>
+<div class="coursework-grid">
+<div class="course-item"><div class="course-code">Gatan</div><div class="course-name">EELS School graduate</div><div class="course-dept">Gatan / Ametek</div></div>
+<div class="course-item"><div class="course-code">GEM</div><div class="course-name">National Consortium Full Fellowship</div><div class="course-dept">UC Berkeley Ph.D.</div></div>
+<div class="course-item"><div class="course-code">MIT</div><div class="course-name">McDermott Scholar</div><div class="course-dept">Massachusetts Institute of Technology</div></div>
+</div></section>
+<div class="divider"></div>
+
+<section id="contact" class="cta">
+<h2>Let's connect.</h2>
+<p>Graduating in December 2026 and looking for roles where deep materials knowledge creates real impact: leading characterization and failure analysis, driving battery materials development, or building data-driven discovery pipelines.</p>
+<div class="cta-links">
+<a href="mailto:togunfunmi@berkeley.edu" class="btn p">togunfunmi@berkeley.edu</a>
+<a href="https://www.linkedin.com/in/tofunmi-ogunfunmi" class="btn s" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://scholar.google.com" class="btn s" target="_blank" rel="noopener">Google Scholar</a>
+</div></section>
+<footer>&copy; 2026 Tofunmi Ogunfunmi</footer>
+
+<script>
+/* Each gallery entry links to its source paper. To change an image, edit `img` (a file path or a data: URI). */
+var PAPERS={
+  aem:{venue:"Adv. Energy Mater. 2025",url:"https://doi.org/10.1002/aenm.202405700"},
+  mrs:{venue:"MRS Advances 2021",url:"https://doi.org/10.1557/s43580-021-00014-3"},
+  jmca:{venue:"J. Mater. Chem. A 2024",url:"https://doi.org/10.1039/d4ta00674g"}
+};
+var galleryData=[
+ {title:"Cross-Sectional SEM/EDS",desc:"Elemental mapping (P, O, S, Ag) of a post-charged LPS pellet with Ag nanoparticles",paper:"aem",img:"images/gallery/0-sem-eds-cross-section.jpg"},
+ {title:"FIB/SEM 3D Tomography",desc:"3D reconstruction of dendrite structures via serial-sectioning FIB-SEM with image segmentation",paper:"aem",img:"images/gallery/1-fib-sem-tomography.jpg"},
+ {title:"BSE-SEM & Ag EDS Mapping",desc:"Backscattered electron imaging with Ag elemental mapping on a polished solid-electrolyte surface",paper:"aem",img:"images/gallery/2-bse-sem-ag-eds.jpg"},
+ {title:"SEM Fracture Analysis",desc:"Fracture surfaces of 0 LiI (brittle) vs 2.5 LiI (ductile) solid electrolytes",paper:"mrs",img:"images/gallery/3-sem-fracture.jpg"},
+ {title:"DIC Strain Mapping",desc:"Digital image correlation strain fields during compressive deformation of solid electrolytes",paper:"mrs",img:"images/gallery/4-dic-strain.jpg"},
+ {title:"SEM Microstructure",desc:"Microstructure of LiBH₄-based solid electrolytes with varying LiI content",paper:"mrs",img:"images/gallery/5-sem-microstructure.jpg"},
+ {title:"SEM NMC/RGO Composites",desc:"pc-NMC811 on a 3D reduced graphene oxide framework at varying carbon contents",paper:"jmca",img:"images/gallery/6-sem-nmc-rgo.jpg"}
+];
+var grid=document.getElementById("galleryGrid");
+galleryData.forEach(function(d,i){
+  var p=PAPERS[d.paper];
+  var card=document.createElement("div");
+  card.className="gallery-item";card.tabIndex=0;card.setAttribute("role","button");
+  card.setAttribute("aria-label","Enlarge image: "+d.title);
+  card.innerHTML='<div class="gallery-img-wrap"><img src="'+d.img+'" alt="'+d.title+': '+d.desc+'" loading="lazy"><div class="gallery-overlay"><span class="gallery-zoom" aria-hidden="true">&#x2922;</span></div></div>'+
+   '<div class="gallery-caption"><h4>'+d.title+'</h4><p>'+d.desc+'</p><div class="gallery-foot"><span class="gallery-venue">'+p.venue+'</span>'+
+   '<a class="paper-link" href="'+p.url+'" target="_blank" rel="noopener">Read the paper</a></div></div>';
+  card.addEventListener("click",function(e){if(e.target.closest("a"))return;openLightbox(i)});
+  card.addEventListener("keydown",function(e){if(e.target!==card)return;if(e.key==="Enter"||e.key===" "){e.preventDefault();openLightbox(i)}});
+  grid.appendChild(card);
+});
+var currentIdx=0,lastFocus=null,lb=document.getElementById("lightbox"),lbImg=document.getElementById("lbImg"),lbT=document.getElementById("lbTitle"),lbD=document.getElementById("lbDesc"),lbV=document.getElementById("lbVenue"),lbL=document.getElementById("lbLink");
+function openLightbox(i){lastFocus=document.activeElement;currentIdx=i;uLB();lb.classList.add("active");document.body.style.overflow="hidden";document.getElementById("lbClose").focus()}
+function cLB(){lb.classList.remove("active");document.body.style.overflow="";if(lastFocus)lastFocus.focus()}
+function uLB(){var d=galleryData[currentIdx],p=PAPERS[d.paper];lbImg.src=d.img;lbImg.alt=d.title;lbT.textContent=d.title;lbD.textContent=d.desc;lbV.textContent=p.venue;lbL.href=p.url}
+function nLB(dir){currentIdx=(currentIdx+dir+galleryData.length)%galleryData.length;uLB()}
+document.getElementById("lbClose").onclick=function(e){e.stopPropagation();cLB()};
+document.getElementById("lbPrev").onclick=function(e){e.stopPropagation();nLB(-1)};
+document.getElementById("lbNext").onclick=function(e){e.stopPropagation();nLB(1)};
+lb.onclick=function(e){if(!document.getElementById("lbInner").contains(e.target))cLB()};
+document.addEventListener("keydown",function(e){if(!lb.classList.contains("active"))return;if(e.key==="Escape")cLB();if(e.key==="ArrowLeft")nLB(-1);if(e.key==="ArrowRight")nLB(1)});
+</script>
+</body>
+</html>

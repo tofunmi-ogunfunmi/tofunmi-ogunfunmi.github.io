@@ -203,37 +203,8 @@ footer{border-top:1px solid var(--bdr);text-align:center;padding:1.6rem;font-siz
 <!-- <p>The catch is that these materials fail at interfaces and defects too small to see by eye: lithium <strong>dendrites</strong> tunnel through the electrolyte, particles crack, and coatings degrade. Understanding that structure is the key to building cells that last.</p> -->
 <p>I study how the solid-state electrolyte microstructure controls battery performance, using <strong>electron microscopy methods</strong> (e.g. SEM/EDS, TEM/STEM, 4D-STEM, EELS, FIB-SEM tomography).</p>
 
-<!-- <div class="diagrams"><figure><svg class="illus" viewBox="0 0 320 340" role="img" aria-labelledby="ic3">
-<title id="ic3">Illustration of FIB-SEM tomography: an ion beam mills away thin slices of a sample while an electron beam images each new face; the stack of images is reconstructed into a 3D model</title>
-<g font-family="DM Sans,sans-serif" font-size="12" fill="#9a968f" text-anchor="middle">
-<text x="112" y="16">electron beam</text><text x="112" y="30">images each face</text>
-<path d="M98 36 L112 104 L126 36 Z" fill="rgba(88,185,71,.28)"/>
-<text x="270" y="44">ion beam</text><text x="270" y="58">mills a slice</text>
-<path d="M270 64 L176 120" stroke="#4a9eff" stroke-width="6" stroke-linecap="round" opacity=".7"/>
-<path d="M60 110 L170 110 L200 92 L90 92 Z" fill="#2a3040" stroke="rgba(255,255,255,.14)"/>
-<path d="M60 110 L170 110 L170 176 L60 176 Z" fill="#1d2330" stroke="rgba(255,255,255,.14)"/>
-<path d="M170 110 L200 92 L200 158 L170 176 Z" fill="#161b25" stroke="rgba(255,255,255,.14)"/>
-<g stroke="rgba(255,255,255,.14)"><line x1="142" y1="110" x2="172" y2="92"/><line x1="152" y1="110" x2="182" y2="92"/><line x1="162" y1="110" x2="192" y2="92"/></g>
-<path d="M72 170 q18 -10 26 -26 q8 -14 24 -18 q10 -3 16 -12" stroke="#58b947" stroke-width="3" fill="none" stroke-linecap="round"/>
-<text x="115" y="196">sample</text>
-<g transform="translate(22 222)">
-<rect x="16" y="0" width="64" height="64" rx="3" fill="#12151c" stroke="rgba(255,255,255,.12)"/>
-<rect x="8" y="8" width="64" height="64" rx="3" fill="#141821" stroke="rgba(255,255,255,.14)"/>
-<rect x="0" y="16" width="64" height="64" rx="3" fill="#171c26" stroke="rgba(255,255,255,.16)"/>
-<path d="M8 72 q12 -8 16 -20 q6 -14 18 -16 q10 -2 14 -12" stroke="#58b947" stroke-width="2.5" fill="none"/>
-</g>
-<text x="66" y="334">stack of slice images</text>
-<path d="M124 262 L176 262" stroke="#9a968f" stroke-width="1.5"/><path d="M176 262 l-8 -5 v10 z" fill="#9a968f"/>
-<g transform="translate(196 214)">
-<path d="M10 92 C24 80 26 62 40 52 C54 42 52 26 66 18 C78 11 88 16 96 6" stroke="#58b947" stroke-width="9" fill="none" stroke-linecap="round" opacity=".35"/>
-<path d="M10 92 C24 80 26 62 40 52 C54 42 52 26 66 18 C78 11 88 16 96 6" stroke="#58b947" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-<path d="M40 52 C48 60 60 62 70 58" stroke="#58b947" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-</g>
-<text x="250" y="334">3D reconstruction</text>
-</g>
-</svg><figcaption>FIB-SEM tomography</figcaption></figure> -->
-
 <div class="diagrams">
+  <!-- Figure 1: FIB-SEM -->
   <figure>
     <svg class="illus" viewBox="0 0 320 340" role="img" aria-labelledby="ic3">
       <title id="ic3">Illustration of FIB-SEM tomography: an ion beam mills away thin slices of a sample while an electron beam images each new face; the stack of images is reconstructed into a 3D model</title>
@@ -288,8 +259,69 @@ footer{border-top:1px solid var(--bdr);text-align:center;padding:1.6rem;font-siz
     </svg>
     <figcaption>FIB-SEM tomography</figcaption>
   </figure>
-</div>
-  
+
+  <!-- Figure 2: 4D-STEM & EELS -->
+  <figure>
+    <svg class="illus" viewBox="0 0 320 340" role="img" aria-labelledby="ic2">
+      <title id="ic2">Illustration of 4D-STEM and EELS: a focused electron probe scans across a sample; at each position a detector records a diffraction pattern (4D-STEM) and a spectrometer records an energy-loss spectrum (EELS)</title>
+      <g font-family="DM Sans,sans-serif" font-size="12" fill="#9a968f" text-anchor="middle">
+        <text x="160" y="16">electron probe</text>
+        <path d="M140 24 L160 96 L180 24 Z" fill="rgba(88,185,71,.2)"/>
+        <rect x="70" y="96" width="180" height="16" rx="3" fill="#2a3040" stroke="rgba(255,255,255,.12)"/>
+        <g stroke="rgba(255,255,255,.18)">
+          <line x1="82" y1="96" x2="82" y2="112"/><line x1="108" y1="96" x2="108" y2="112"/><line x1="134" y1="96" x2="134" y2="112"/><line x1="160" y1="96" x2="160" y2="112"/><line x1="186" y1="96" x2="186" y2="112"/><line x1="212" y1="96" x2="212" y2="112"/><line x1="238" y1="96" x2="238" y2="112"/>
+        </g>
+        <circle cx="160" cy="104" r="4" fill="#58b947"/>
+        <text x="256" y="108" text-anchor="start">sample</text>
+        <path d="M160 112 L110 176 M160 112 L210 176" stroke="rgba(88,185,71,.35)" stroke-width="1.5" fill="none"/>
+        <circle cx="80" cy="238" r="58" fill="#12151c" stroke="rgba(255,255,255,.1)"/>
+        <circle cx="80" cy="238" r="7" fill="#f0ede8"/>
+        <g fill="#4a9eff">
+          <circle cx="58" cy="238" r="4"/><circle cx="102" cy="238" r="4"/><circle cx="80" cy="216" r="4"/><circle cx="80" cy="260" r="4"/><circle cx="58" cy="216" r="4"/><circle cx="102" cy="260" r="4"/><circle cx="58" cy="260" r="4"/><circle cx="102" cy="216" r="4"/><circle cx="36" cy="238" r="4"/><circle cx="124" cy="238" r="4"/><circle cx="80" cy="194" r="4"/><circle cx="80" cy="282" r="4"/>
+        </g>
+        <text x="80" y="316" fill="#f0ede8">4D-STEM</text>
+        <text x="80" y="332">diffraction at every pixel</text>
+        <rect x="176" y="186" width="130" height="104" rx="8" fill="#12151c" stroke="rgba(255,255,255,.1)"/>
+        <path d="M188 272 L196 272 L199 200 L203 268 C222 262 236 258 250 256 L253 236 L257 250 C270 252 284 256 296 258" stroke="#58b947" stroke-width="2" fill="none"/>
+        <line x1="188" y1="276" x2="298" y2="276" stroke="rgba(255,255,255,.2)"/>
+        <text x="241" y="316" fill="#f0ede8">EELS</text>
+        <text x="241" y="332">chemistry and bonding</text>
+      </g>
+    </svg>
+    <figcaption>4D-STEM and EELS</figcaption>
+  </figure>
+</div> <!-- ✅ Single closing tag after BOTH figures -->
+
+<!-- <div class="diagrams"><figure><svg class="illus" viewBox="0 0 320 340" role="img" aria-labelledby="ic3">
+<title id="ic3">Illustration of FIB-SEM tomography: an ion beam mills away thin slices of a sample while an electron beam images each new face; the stack of images is reconstructed into a 3D model</title>
+<g font-family="DM Sans,sans-serif" font-size="12" fill="#9a968f" text-anchor="middle">
+<text x="112" y="16">electron beam</text><text x="112" y="30">images each face</text>
+<path d="M98 36 L112 104 L126 36 Z" fill="rgba(88,185,71,.28)"/>
+<text x="270" y="44">ion beam</text><text x="270" y="58">mills a slice</text>
+<path d="M270 64 L176 120" stroke="#4a9eff" stroke-width="6" stroke-linecap="round" opacity=".7"/>
+<path d="M60 110 L170 110 L200 92 L90 92 Z" fill="#2a3040" stroke="rgba(255,255,255,.14)"/>
+<path d="M60 110 L170 110 L170 176 L60 176 Z" fill="#1d2330" stroke="rgba(255,255,255,.14)"/>
+<path d="M170 110 L200 92 L200 158 L170 176 Z" fill="#161b25" stroke="rgba(255,255,255,.14)"/>
+<g stroke="rgba(255,255,255,.14)"><line x1="142" y1="110" x2="172" y2="92"/><line x1="152" y1="110" x2="182" y2="92"/><line x1="162" y1="110" x2="192" y2="92"/></g>
+<path d="M72 170 q18 -10 26 -26 q8 -14 24 -18 q10 -3 16 -12" stroke="#58b947" stroke-width="3" fill="none" stroke-linecap="round"/>
+<text x="115" y="196">sample</text>
+<g transform="translate(22 222)">
+<rect x="16" y="0" width="64" height="64" rx="3" fill="#12151c" stroke="rgba(255,255,255,.12)"/>
+<rect x="8" y="8" width="64" height="64" rx="3" fill="#141821" stroke="rgba(255,255,255,.14)"/>
+<rect x="0" y="16" width="64" height="64" rx="3" fill="#171c26" stroke="rgba(255,255,255,.16)"/>
+<path d="M8 72 q12 -8 16 -20 q6 -14 18 -16 q10 -2 14 -12" stroke="#58b947" stroke-width="2.5" fill="none"/>
+</g>
+<text x="66" y="334">stack of slice images</text>
+<path d="M124 262 L176 262" stroke="#9a968f" stroke-width="1.5"/><path d="M176 262 l-8 -5 v10 z" fill="#9a968f"/>
+<g transform="translate(196 214)">
+<path d="M10 92 C24 80 26 62 40 52 C54 42 52 26 66 18 C78 11 88 16 96 6" stroke="#58b947" stroke-width="9" fill="none" stroke-linecap="round" opacity=".35"/>
+<path d="M10 92 C24 80 26 62 40 52 C54 42 52 26 66 18 C78 11 88 16 96 6" stroke="#58b947" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<path d="M40 52 C48 60 60 62 70 58" stroke="#58b947" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+</g>
+<text x="250" y="334">3D reconstruction</text>
+</g>
+</svg><figcaption>FIB-SEM tomography</figcaption></figure> -->
+ <!-- 
 <figure><svg class="illus" viewBox="0 0 320 340" role="img" aria-labelledby="ic2">
 <title id="ic2">Illustration of 4D-STEM and EELS: a focused electron probe scans across a sample; at each position a detector records a diffraction pattern (4D-STEM) and a spectrometer records an energy-loss spectrum (EELS)</title>
 <g font-family="DM Sans,sans-serif" font-size="12" fill="#9a968f" text-anchor="middle">
@@ -313,7 +345,7 @@ footer{border-top:1px solid var(--bdr);text-align:center;padding:1.6rem;font-siz
 <!-- <p>A large part of my work is <strong>materials data analysis</strong>. A single 4D-STEM experiment can produce gigabytes of diffraction patterns, so I build Python and <strong>machine-learning</strong> pipelines that turn them into phase and defect maps automatically.</p>
 <p>I also study how the electron beam itself can change sensitive battery materials, so that what we image reflects real behavior rather than artifacts.</p>
 <p>See my <a href="#publications">publications</a> for more.</p> -->
-</div>
+<!-- </div> -->
 
 <hr class="sep">
 <h3 class="sub">Research highlights</h3>

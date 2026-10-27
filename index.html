@@ -875,7 +875,7 @@ function stemWidget(root) {
   function setProbe(fx, fy) { probe = home = [Math.round(clamp(fx, ST.S0, ST.S1)), Math.round(clamp(fy, ST.S0, ST.S1))]; if (scanning) { scanning = false; updStatus(); } live(); }
   function stepScan() {
     const t0 = performance.now(), from = acquired, n = SG * SG;
-    while (acquired < n && acquired - from < 3) {
+    while (acquired < n && acquired - from < 2) {
       const p = scanPos(acquired, SG), I = eng.diffract(p[0], p[1]), o = acquired * NN, c0 = ST.N / 2 - NB, N = ST.N;
       for (let by = 0; by < NB; by++) { const y = c0 + 2 * by; for (let bx = 0; bx < NB; bx++) { const i = y * N + c0 + 2 * bx; cube[o + by * NB + bx] = I[i] + I[i + 1] + I[i + N] + I[i + N + 1]; } }
       const or = eng.orient(I); oriH[acquired] = or[0]; oriC[acquired] = or[1]; probe = p; acquired++;

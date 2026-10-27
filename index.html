@@ -795,9 +795,9 @@ function drawStemScene(V, eng, comp, dpCv, probe, labels) {
   ctx.strokeStyle = 'rgba(170,245,150,.75)'; poly(ctx, circ3(wx, wy, G.zIn, Rin, 40).map(q => P(q[0], q[1], q[2]))); ctx.stroke();
   const sp = P(wx, wy, 0); ctx.save(); ctx.shadowColor = '#7dff6a'; ctx.shadowBlur = 14; ctx.fillStyle = '#eaffe4'; ctx.beginPath(); ctx.arc(sp[0], sp[1], 2.6, 0, TAU); ctx.fill(); ctx.restore();
   if (labels) {
-    const top = P(wx, wy, G.zIn); txt(ctx, 'electron probe', top[0], top[1] - Rin * cam.s * cam.sE - 10, { align: 'center', color: COL.t1 });
-    const rc = [t00, t10, t01, t11].reduce((a, b) => (b[0] > a[0] ? b : a)); txt(ctx, 'sample', rc[0] + 8, rc[1] + 4);
-    const dc = [d00, d10, d01, d11].reduce((a, b) => (b[0] > a[0] ? b : a)); txt(ctx, 'detector · diffraction pattern', dc[0] - 6, dc[1] + 26, { align: 'right' });
+    const top = P(wx, wy, G.zIn); txt(ctx, 'Electron probe', top[0], top[1] - Rin * cam.s * cam.sE - 10, { align: 'center', color: COL.t1 });
+    const rc = [t00, t10, t01, t11].reduce((a, b) => (b[0] > a[0] ? b : a)); txt(ctx, 'Sample', rc[0] + 8, rc[1] + 4);
+    const dc = [d00, d10, d01, d11].reduce((a, b) => (b[0] > a[0] ? b : a)); txt(ctx, 'Detector', dc[0] - 6, dc[1] + 26, { align: 'right' });
   }
 }
 
@@ -835,7 +835,7 @@ function stemWidget(root) {
   const dpCv = offscreen(ST.N, ST.N), dctx = dpCv.getContext('2d'), dImg = dctx.createImageData(ST.N, ST.N), comp = offscreen(ST.FW, ST.FW), cctx = comp.getContext('2d');
   const stp = (ST.S1 - ST.S0) / (SG - 1), R0 = ST.S0 - stp / 2, RS = ST.S1 - ST.S0 + stp;
   const adfRange = () => { const o = 1.22; return [Math.min(Math.max(eng.alpha * 1.2, 0.3), o - 0.06), o]; };
-  const TITLES = { bf: 'Virtual bright-field image', adf: 'Virtual annular dark-field image', vdf: 'Virtual dark-field image', ori: 'Crystal orientation map' };
+  const TITLES = { bf: 'Virtual bright-field image', adf: 'Virtual Annular dark-field image', vdf: 'Virtual dark-field image', ori: 'Crystal orientation map' };
 
   const scanBtn = btn('Scan', () => { if (!eng) return; if (scanning) scanning = false; else { if (acquired >= SG * SG) acquired = 0; scanning = true; } updStatus(); });
   const sA = slider({ label: 'Convergence semi-angle α', min: 0.04, max: 0.9, step: 0.005, value: 0.12, fmt: v => v.toFixed(2) + ' Å⁻¹ · ' + (v * ST.LAMBDA * 1000).toFixed(1) + ' mrad', on: v => { if (!eng) return; eng.alpha = v; eng.makeProbe(); restart(); } });
@@ -1438,7 +1438,7 @@ function llzoWidget(root) {
   let D = null, P = null, I = null, NS = 24, N = 64, mode = 'bf', atomsOn = true, gamma = 0.3, ix = 6, iy = 6, vdf = null, dirty = true, busy = false, vals = new Float32Array(NS * NS), mask = new Int32Array(0);
   const vCv = offscreen(2 * NS, 2 * NS), vctx = vCv.getContext('2d'), vImg = vctx.createImageData(2 * NS, 2 * NS);
   const dpCv = offscreen(N, N), dctx = dpCv.getContext('2d'), dImg = dctx.createImageData(N, N), TW = 384, comp = offscreen(TW, TW), cctx = comp.getContext('2d'), atomCv = offscreen(TW, TW);
-  const TITLES = { bf: 'Virtual bright-field image', abf: 'Virtual annular bright-field image', adf: 'Virtual annular dark-field image', vdf: 'Virtual dark-field image' };
+  const TITLES = { bf: 'Virtual bright-field image', abf: 'Virtual annular bright-field image', adf: 'Virtual Annular dark-field image', vdf: 'Virtual dark-field image' };
   const sPre = seg({ label: 'Convergence semi-angle', options: [['0', '1 mrad · nanobeam'], ['1', '6 mrad'], ['2', '20 mrad · atomic resolution']], value: '2', on: v => choose(+v) });
   const sDet = seg({ label: 'Virtual detector', options: [['bf', 'Bright field'], ['abf', 'Annular BF'], ['adf', 'Annular DF'], ['vdf', 'Dark field (spot)']], value: mode, on: v => { mode = v; if (v === 'vdf' && !vdf) vdf = brightest(); remask(); } });
   const sAt = seg({ label: 'Atom columns', options: [['on', 'Show'], ['off', 'Hide']], value: 'on', on: v => { atomsOn = v === 'on'; compose(); } });

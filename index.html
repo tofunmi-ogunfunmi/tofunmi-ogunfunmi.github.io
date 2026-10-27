@@ -918,7 +918,7 @@ function stemWidget(root) {
   updStatus();
   whenVisible(root, dt => {
     if (!eng) { eng = new StemEngine(0.12); cube = new Float32Array(SG * SG * NN); oriH = new Float32Array(SG * SG); oriC = new Float32Array(SG * SG); vals = new Float32Array(SG * SG); computeMask(); live(); paintV(); scanning = true; updStatus(); }
-    if (scanning) stepScan();
+    if (scanning) stepScan(dt);
     if (dirty) { drawStemScene(SC, eng, comp, dpCv, probe, true); drawA(); drawB(); dirty = false; }
   });
 }

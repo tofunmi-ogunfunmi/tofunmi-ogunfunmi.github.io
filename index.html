@@ -1280,10 +1280,10 @@ function drawEelsScene(V, s) {
   ctx.strokeStyle = 'rgba(170,245,150,.75)'; poly(ctx, circ3(wx, wy, 52, 9, 40).map(q => P(q[0], q[1], q[2]))); ctx.stroke();
   const sp = P(wx, wy, 0); ctx.save(); ctx.shadowColor = '#7dff6a'; ctx.shadowBlur = 14; ctx.fillStyle = '#eaffe4'; ctx.beginPath(); ctx.arc(sp[0], sp[1], 2.6, 0, TAU); ctx.fill(); ctx.restore();
   if (s.labels) {
-    const pt = P(wx, wy, 52); txt(ctx, 'electron probe', pt[0], pt[1] - 9 * cam.s * cam.sE - 10, { align: 'center', color: COL.t1 });
-    const pr = P(-sx * pw, -t, z0 - R * 0.6); txt(ctx, 'magnetic prism (90° sector)', pr[0] + 10, pr[1], { align: 'left' });
-    txt(ctx, 'energy-loss spectrum', (s10[0] + s11[0]) / 2, Math.min(s10[1], s11[1]) - 10, { align: 'center' });
-    const lm = P(W2, -H2, -3); txt(ctx, 'sample', lm[0] + 8, lm[1] + 4, { align: 'left' });
+    const pt = P(wx, wy, 52); txt(ctx, 'Electron probe', pt[0], pt[1] - 9 * cam.s * cam.sE - 10, { align: 'center', color: COL.t1 });
+    const pr = P(-sx * pw, -t, z0 - R * 0.6); txt(ctx, 'Magnetic prism', pr[0] + 10, pr[1], { align: 'left' });
+    txt(ctx, 'Energy-loss spectrum', (s10[0] + s11[0]) / 2, Math.min(s10[1], s11[1]) - 10, { align: 'center' });
+    const lm = P(W2, -H2, -3); txt(ctx, 'Sample', lm[0] + 8, lm[1] + 4, { align: 'left' });
   }
 }
 function eelsPillar(cv) {

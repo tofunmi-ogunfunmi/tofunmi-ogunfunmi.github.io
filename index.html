@@ -608,6 +608,20 @@ function whenVisible(el, frame) {
   if (!('IntersectionObserver' in window)) { on = true; id = requestAnimationFrame(loop); return; }
   new IntersectionObserver(es => { for (const e of es) { if (e.isIntersecting && !on) { on = true; last = 0; id = requestAnimationFrame(loop); } else if (!e.isIntersecting && on) { on = false; cancelAnimationFrame(id); } } }, { rootMargin: '80px' }).observe(el);
 }
+
+  /* research-page cards: draw one still frame when scrolled into view, animate only while hovered or focused */
+function whenHovered(el, frame) {
+  const card = el.closest('.pillar') || el; let on = false, id = 0, last = 0, drawn = false;
+  const loop = t => { if (!on) return; const dt = last ? Math.min(0.1, (t - last) / 1000) : 0.016; last = t; try { frame(dt); } catch (e) { on = false; console.error(e); return; } id = requestAnimationFrame(loop); };
+  const start = () => { if (on || REDUCED) return; on = true; last = 0; id = requestAnimationFrame(loop); };
+  const stop = () => { on = false; cancelAnimationFrame(id); };
+  card.addEventListener('pointerenter', start); card.addEventListener('pointerleave', stop);
+  card.addEventListener('focusin', start); card.addEventListener('focusout', stop);
+  const still = () => { if (!drawn) { drawn = true; try { frame(0); } catch (e) { console.error(e); } } };
+  if (!('IntersectionObserver' in window)) { still(); return; }
+  const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { still(); io.disconnect(); } }, { rootMargin: '80px' }); io.observe(el);
+}
+  
 function drag(V, fn, opt) {
   let down = false; const c = V.cv;
   c.addEventListener('pointerdown', e => { down = true; try { c.setPointerCapture(e.pointerId); } catch (_) {} fn(pos(V, e), 'down', e); });
@@ -799,7 +813,7 @@ function stemPillar(cv) {
     for (let k = 0; k < n && s.i < SG * SG; k++) { const p = scanPos(s.i, SG); s.eng.diffract(p[0], p[1]); const o = s.eng.orient(s.eng.I), c = oriRGB(o[0], o[1]); d[s.i * 4] = c[0] * 255; d[s.i * 4 + 1] = c[1] * 255; d[s.i * 4 + 2] = c[2] * 255; d[s.i * 4 + 3] = 245; s.probe = p; s.i++; }
   }
   function render() { s.vctx.putImageData(s.vImg, 0, 0); composeStem(s.cctx, s.eng.S.tex, s.vCv, SG); paintDP(s.eng.I, s.dImg, 0.28); s.dctx.putImageData(s.dImg, 0, 0); drawStemScene(V, s.eng, s.comp, s.dpCv, s.probe, false); }
-  whenVisible(cv, () => {
+ whenHovered(cv, () => {
     if (!s) init();
     if (REDUCED) { if (!s.done) { step(SG * 20); render(); s.done = true; } return; }
     if (s.hold > 0) { if (--s.hold === 0) { s.i = 0; s.vImg.data.fill(0); } } else { step(3); if (s.i >= SG * SG) s.hold = 150; }
@@ -1077,7 +1091,7 @@ function fibPillar(cv) {
   const W = 150, t = 0.1, n = Math.floor(FB.YMAX / t + 1e-6); let s = null;
   function reset() { s.k = 0; s.pts = new PtBuf(); s.phase = 'mill'; s.tp = 0; s.reveal = 1; s.hold = 0; const sl = fibSlice(0, W, { seed: 3 }); fibPoints(sl, s.pts, 1); fibImageTo(s.face, sl, false); }
   function advance() { s.pctx.drawImage(s.face, 0, 0); s.k++; const sl = fibSlice(s.k * t, W, { seed: s.k * 31 + 3 }); fibPoints(sl, s.pts, 1); fibImageTo(s.face, sl, false); }
-  whenVisible(cv, dt => {
+ whenHovered(cv, dt => {
     if (!s) { const face = offscreen(W, 80), prev = offscreen(W, 80); s = { face, prev, pctx: null }; reset(); prev.width = face.width; prev.height = face.height; s.pctx = prev.getContext('2d'); if (REDUCED) { for (let i = 0; i < 18; i++) advance(); } }
     if (REDUCED) { if (!s.done) { drawFibScene(V, { ys: s.k * t, faceCv: s.face, pts: s.pts, every: 2 }); s.done = true; } return; }
     let ionX = null, eb = 0;
@@ -1293,7 +1307,7 @@ function drawEelsScene(V, s) {
 function eelsPillar(cv) {
   const V = makeCanvas(cv, 360, 360); V.cam = new Cam(-28, 26); eelsCamFit(V.cam, 360, 360, 10);
   let s = null; const P = { t: 0.45, res: 0.5 };
-  whenVisible(cv, dt => {
+ whenHovered(cv, dt => {
     if (!s) s = { tex: eelsTexture(), spec: offscreen(320, 170), t: 1.2 };
     if (REDUCED && s.done) return;
     s.t += dt; const px = 60 + 46 * Math.sin(s.t * 0.4), probe = [px, 32];
